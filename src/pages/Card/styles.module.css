@@ -1,0 +1,155 @@
+.container {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #0cd663ab 0.15%, rgba(21, 33, 43, 0.61) 99.86%);
+}
+
+.image {
+	width: 250px;
+	height: 250px;
+  /* position: absolute; */
+  z-index: 30;
+}
+
+.card {
+  margin: 0;
+  width: 912px;
+  height: 513px;
+  background-color: #15212B;
+  border-radius: 15px;
+  background-image: url('../../images/Card.jpg');
+  background-size: cover;
+  position: relative;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute !important;
+  transform: translate3d(15px, 0, 80px);
+  left: 70px;
+  top: 50px;
+  overflow: hidden;
+  border-radius: 100%;
+  z-index: 20;
+}
+
+.badge:before {
+  content: '';
+  top: 0;
+  left: -150px;
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.205);
+  transform: skewX(-30deg);
+  transition: 0.5s ease;
+}
+
+.glare {
+  content: '';
+  top: 0;
+  left: -150px;
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.205);
+  transform: skewX(-30deg);
+  transition: 0.5s ease;
+}
+
+.card:hover .badge:before {
+  left: 280px;
+  transition: 0.5s ease;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3.2rem;
+  font-family: 'Righteous', cursive;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.308) 10px 10px 10px;
+  position: absolute;
+  bottom: 70px;
+  transform: translate3d(20px, 0, 50px);
+  left: 40px;
+}
+
+.nameContainer {
+  position: absolute;
+  display: flex;
+  width: 58%;
+  justify-content: space-between;
+  bottom: 140px;
+  align-items: center;
+  left: 40px;
+  transform: translate3d(20px, 0, 50px);
+  z-index: 10;
+}
+
+.id {
+  font-size: 32px;
+  font-family: 'Righteous', cursive;
+  color: black;
+	text-shadow: rgba(0, 0, 0, 0.308) 10px 10px 10px;
+}
+
+.name {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 28px;
+  font-family: 'Righteous', cursive;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.308) 10px 10px 10px;
+}
+
+.nickname {
+  color: #0E161D;
+  font-size: 48px;
+}
+
+@media (max-width: 1000px) {
+	 .card {
+			width: 768px;
+			height: 432px;
+			background-color: #15212B;
+			border-radius: 15px;
+			background-image: url('../../images/Card.jpg');
+			background-size: cover;
+			position: relative;
+			transform-style: preserve-3d;
+	 }
+
+	.image {
+		width: 200px;
+		height: 200px;
+	}
+
+	.title {
+		font-size: 2.5rem;
+	}
+
+	.nameContainer {
+		width: 55%;
+		bottom: 120px;
+	}
+	
+	.id {
+		font-size: 1.5rem;
+	}
+	
+	.name {
+		font-size: 1.5rem;
+	}
+}
